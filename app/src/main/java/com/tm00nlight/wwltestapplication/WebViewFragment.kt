@@ -6,6 +6,7 @@ import android.content.ActivityNotFoundException
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -60,12 +61,16 @@ class WebViewFragment : Fragment() {
                 }
             }
             webChromeClient = object : WebChromeClient() {
-                override fun onShowFileChooser(webView: WebView?, filePathCallback: ValueCallback<Array<Uri>>?, fileChooserParams: FileChooserParams?): Boolean {
+                override fun onShowFileChooser(
+                    webView: WebView?,
+                    filePathCallback: ValueCallback<Array<Uri>>?,
+                    fileChooserParams: FileChooserParams?
+                ): Boolean {
                     try {
                         fileChooserValueCallback = filePathCallback;
                         fileChooserResultLauncher.launch(fileChooserParams?.createIntent())
                     } catch (e: ActivityNotFoundException) {
-                        // You may handle "No activity found to handle intent" error
+                        Log.e("File Chooser", e.message.toString())
                     }
                     return true
                 }

@@ -21,10 +21,32 @@
         android:id="@+id/gameMenuFragment"
         android:name="com.tm00nlight.wwltestapplication.GameMenuFragment"
         android:label="GameMenuFragment"
-        tools:layout="@layout/fragment_game_menu"/>
+        tools:layout="@layout/fragment_game_menu">
+        <action
+            android:id="@+id/action_gameMenuFragment_to_gameFragment"
+            app:destination="@id/gameFragment" />
+    </fragment>
     <fragment
         android:id="@+id/webViewFragment"
         android:name="com.tm00nlight.wwltestapplication.WebViewFragment"
         android:label="WebViewFragment"
         tools:layout="@layout/fragment_webview"/>
+    <fragment
+        android:id="@+id/gameFragment"
+        android:name="com.tm00nlight.wwltestapplication.GameFragment"
+        android:label="GameFragment"
+        tools:layout="@layout/fragment_game">
+        <action
+            android:id="@+id/action_gameFragment_to_gameResultFragment"
+            app:destination="@id/gameResultFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/gameResultFragment"
+        android:name="com.tm00nlight.wwltestapplication.GameResultFragment"
+        android:label="GameResultFragment"
+        tools:layout="@layout/fragment_game_result">
+        <action
+            android:id="@+id/action_gameResultFragment_to_gameMenuFragment"
+            app:destination="@id/gameMenuFragment" />
+    </fragment>
 </navigation>

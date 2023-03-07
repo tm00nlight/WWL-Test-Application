@@ -28,24 +28,28 @@
         app:layout_constraintTop_toBottomOf="@id/title">
 
         <com.google.android.material.button.MaterialButton
+            android:id="@+id/coffeeButton"
             style="@style/menuButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/coffee" />
 
         <com.google.android.material.button.MaterialButton
+            android:id="@+id/foodButton"
             style="@style/menuButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/food" />
 
         <com.google.android.material.button.MaterialButton
+            android:id="@+id/catsButton"
             style="@style/menuButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/cats" />
 
         <com.google.android.material.button.MaterialButton
+            android:id="@+id/dogsButton"
             style="@style/menuButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

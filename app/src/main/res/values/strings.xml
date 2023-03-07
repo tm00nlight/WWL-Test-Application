@@ -1,6 +1,5 @@
 <resources>
     <string name="app_name">WWL Test Application</string>
-    <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="game_name">Game Name</string>
     <string name="back_button_text">Не-а, ты останешься здесь! :)</string>
@@ -9,4 +8,11 @@
     <string name="cats">Котики</string>
     <string name="dogs">Собачки</string>
     <string name="choose_text">Выбери, в чем ты профи:</string>
+    <string name="question_coffee">Где латте?</string>
+    <string name="question_food">Где лазанья?</string>
+    <string name="question_cats">Где шотландец?</string>
+    <string name="question_dogs">Где шпиц?</string>
+    <string name="success">Правильно!</string>
+    <string name="fail">А вот и нет :(</string>
+    <string name="try_again">Попробовать снова</string>
 </resources>
