@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">WWL Test Application</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="game_name">Game Name</string>
+    <string name="game_name">Викторина для профи</string>
     <string name="back_button_text">Не-а, ты останешься здесь! :)</string>
     <string name="coffee">Кофе</string>
     <string name="food">Еда</string>
