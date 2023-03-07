@@ -22,7 +22,7 @@ class WebViewFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        val url = arguments?.getString("web_link")
+        val url = arguments?.getString(BuildConfig.URL_KEY)
         url.let {
             if (it != null) {
                 val myWebView: WebView = requireActivity().findViewById(R.id.webView)
