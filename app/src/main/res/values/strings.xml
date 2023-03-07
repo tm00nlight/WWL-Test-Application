@@ -4,4 +4,9 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="game_name">Game Name</string>
     <string name="back_button_text">Не-а, ты останешься здесь! :)</string>
+    <string name="coffee">Кофе</string>
+    <string name="food">Еда</string>
+    <string name="cats">Котики</string>
+    <string name="dogs">Собачки</string>
+    <string name="choose_text">Выбери, в чем ты профи:</string>
 </resources>

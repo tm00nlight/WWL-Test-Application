@@ -27,7 +27,7 @@ class StartFragment : Fragment() {
 
         val remoteConfig = Firebase.remoteConfig
         val configSettings = remoteConfigSettings {
-            minimumFetchIntervalInSeconds = 3600
+            minimumFetchIntervalInSeconds = 60
         }
         remoteConfig.setConfigSettingsAsync(configSettings)
 
