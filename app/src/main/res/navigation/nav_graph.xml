@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/startFragment">
+
+    <fragment
+        android:id="@+id/startFragment"
+        android:name="com.tm00nlight.wwltestapplication.StartFragment"
+        android:label="StartFragment"
+        tools:layout="@layout/fragment_start">
+        <action
+            android:id="@+id/action_startFragment_to_gameMenuFragment"
+            app:destination="@id/gameMenuFragment" />
+        <action
+            android:id="@+id/action_startFragment_to_webViewFragment"
+            app:destination="@id/webViewFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/gameMenuFragment"
+        android:name="com.tm00nlight.wwltestapplication.GameMenuFragment"
+        android:label="GameMenuFragment"
+        tools:layout="@layout/fragment_game_menu"/>
+    <fragment
+        android:id="@+id/webViewFragment"
+        android:name="com.tm00nlight.wwltestapplication.WebViewFragment"
+        android:label="WebViewFragment"
+        tools:layout="@layout/fragment_webview"/>
+</navigation>
