@@ -1,8 +1,8 @@
 package com.tm00nlight.wwltestapplication
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 
 class MainActivity : AppCompatActivity() {
 
@@ -12,8 +12,7 @@ class MainActivity : AppCompatActivity() {
 
     }
 
-    override fun onBackPressed() {
-        Toast.makeText(this, "Не-а, ты останешься здесь! :)", Toast.LENGTH_LONG)
+    override fun onBackPressed() =
+        Toast.makeText(this, getString(R.string.back_button_text), Toast.LENGTH_LONG)
             .show()
-    }
 }
