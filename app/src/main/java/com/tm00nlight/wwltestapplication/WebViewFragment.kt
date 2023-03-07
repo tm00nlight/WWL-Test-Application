@@ -1,9 +1,11 @@
 package com.tm00nlight.wwltestapplication
 
+import android.annotation.SuppressLint
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.webkit.WebView
 import androidx.fragment.app.Fragment
 
 class WebViewFragment : Fragment() {
@@ -16,18 +18,18 @@ class WebViewFragment : Fragment() {
         return inflater.inflate(R.layout.fragment_webview, container, false)
     }
 
+    @SuppressLint("SetJavaScriptEnabled")
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
         val url = arguments?.getString("web_link")
         url.let {
             if (it != null) {
-                loadUrl(it)
+                val myWebView: WebView = requireActivity().findViewById(R.id.webView)
+                myWebView.settings.javaScriptEnabled = true
+                myWebView.loadUrl(it)
             }
         }
     }
 
-    fun loadUrl(url: String) {
-
-    }
 }
