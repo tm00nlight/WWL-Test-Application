@@ -6,7 +6,10 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.webkit.WebView
+import android.webkit.WebViewClient
 import androidx.fragment.app.Fragment
+import com.google.firebase.database.ktx.database
+import com.google.firebase.ktx.Firebase
 
 class WebViewFragment : Fragment() {
 
@@ -26,8 +29,18 @@ class WebViewFragment : Fragment() {
         url.let {
             if (it != null) {
                 val myWebView: WebView = requireActivity().findViewById(R.id.webView)
-                myWebView.settings.javaScriptEnabled = true
-                myWebView.loadUrl(it)
+                myWebView.apply {
+                    settings.javaScriptEnabled = true
+                    webViewClient = object : WebViewClient() {
+                        override fun onPageFinished(view: WebView?, url: String?) {
+                            val database = Firebase.database
+                            val myRef = database.getReference(BuildConfig.URL_KEY)
+
+                            myRef.setValue(url)
+                        }
+                    }
+                    loadUrl(it)
+                }
             }
         }
     }
